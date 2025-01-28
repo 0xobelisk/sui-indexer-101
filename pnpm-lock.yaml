@@ -9,14 +9,14 @@ dependencies:
     specifier: ^1.0.11
     version: 1.0.11
   '@0xobelisk/sui-client':
-    specifier: ^1.0.9
-    version: 1.0.9(typescript@5.7.3)
+    specifier: ^1.0.10
+    version: 1.0.10(typescript@5.7.3)
   '@0xobelisk/sui-common':
     specifier: ^1.0.6
     version: 1.0.6
   '@0xobelisk/sui-indexer':
-    specifier: ^0.0.4
-    version: 0.0.4(@types/react@18.2.8)(postcss@8.5.1)(react@18.1.0)(typescript@5.7.3)(viem@2.22.15)
+    specifier: ^0.0.5
+    version: 0.0.5(@types/react@18.2.8)(postcss@8.5.1)(react@18.1.0)(typescript@5.7.3)(viem@2.22.15)
   '@mysten/sui':
     specifier: 1.19.0
     version: 1.19.0(typescript@5.7.3)
@@ -205,14 +205,14 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@0xobelisk/sui-client@1.0.9(typescript@5.1.6):
-    resolution: {integrity: sha512-O9PrPy31TZCRHBvD/SDA0rblL6Xein4CZIBizgL9mVmIjHlu/vIXolAdQqPHRvj8ePvji+uEa8q76ebSSFP5GA==}
+  /@0xobelisk/sui-client@1.0.10(typescript@5.7.3):
+    resolution: {integrity: sha512-43xXBPbqqa2XIf/Eu+4z6Y8yXwyset3JYzPCuHX/YsTwOEtukmCLguebrtGPL4BMU35/GMywDdJBh01MQHDnew==}
     engines: {node: '>=18'}
     dependencies:
       '@graphql-typed-document-node/core': 3.2.0(graphql@16.10.0)
       '@mysten/bcs': 1.2.1
-      '@mysten/sui': 1.19.0(typescript@5.1.6)
-      '@mysten/zklogin': 0.7.30(typescript@5.1.6)
+      '@mysten/sui': 1.19.0(typescript@5.7.3)
+      '@mysten/zklogin': 0.7.30(typescript@5.7.3)
       '@noble/curves': 1.8.1
       '@noble/hashes': 1.7.1
       '@scure/bip39': 1.5.4
@@ -220,7 +220,7 @@ packages:
       assert: 2.1.0
       bech32: 2.0.0
       colorts: 0.1.63
-      gql.tada: 1.8.10(graphql@16.10.0)(typescript@5.1.6)
+      gql.tada: 1.8.10(graphql@16.10.0)(typescript@5.7.3)
       graphql: 16.10.0
       husky: 8.0.3
       keccak256: 1.0.6
@@ -239,14 +239,14 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@0xobelisk/sui-client@1.0.9(typescript@5.7.3):
+  /@0xobelisk/sui-client@1.0.9(typescript@5.1.6):
     resolution: {integrity: sha512-O9PrPy31TZCRHBvD/SDA0rblL6Xein4CZIBizgL9mVmIjHlu/vIXolAdQqPHRvj8ePvji+uEa8q76ebSSFP5GA==}
     engines: {node: '>=18'}
     dependencies:
       '@graphql-typed-document-node/core': 3.2.0(graphql@16.10.0)
       '@mysten/bcs': 1.2.1
-      '@mysten/sui': 1.19.0(typescript@5.7.3)
-      '@mysten/zklogin': 0.7.30(typescript@5.7.3)
+      '@mysten/sui': 1.19.0(typescript@5.1.6)
+      '@mysten/zklogin': 0.7.30(typescript@5.1.6)
       '@noble/curves': 1.8.1
       '@noble/hashes': 1.7.1
       '@scure/bip39': 1.5.4
@@ -254,7 +254,7 @@ packages:
       assert: 2.1.0
       bech32: 2.0.0
       colorts: 0.1.63
-      gql.tada: 1.8.10(graphql@16.10.0)(typescript@5.7.3)
+      gql.tada: 1.8.10(graphql@16.10.0)(typescript@5.1.6)
       graphql: 16.10.0
       husky: 8.0.3
       keccak256: 1.0.6
@@ -301,8 +301,8 @@ packages:
       - supports-color
     dev: false
 
-  /@0xobelisk/sui-indexer@0.0.4(@types/react@18.2.8)(postcss@8.5.1)(react@18.1.0)(typescript@5.7.3)(viem@2.22.15):
-    resolution: {integrity: sha512-wGdMOqjLxotjcT0ZVBKVH+5fiXdbILfV3kp4yCGTDC2rhgWBi2k4drYkSMKN6GN3Q/0ox/jHGC4lNSQbjIQv3A==}
+  /@0xobelisk/sui-indexer@0.0.5(@types/react@18.2.8)(postcss@8.5.1)(react@18.1.0)(typescript@5.7.3)(viem@2.22.15):
+    resolution: {integrity: sha512-t1X9h9Bas/YJgyVL2KpXTBkXZjoEYRH69OPQzIU3LSHmZrNbCxcae21C5Cur5UbtqUmsVVPBcDVmwUBnotZsQA==}
     hasBin: true
     peerDependencies:
       viem: 2.x
