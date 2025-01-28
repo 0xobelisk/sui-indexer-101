@@ -6,17 +6,17 @@ settings:
 
 dependencies:
   '@0xobelisk/sui-cli':
-    specifier: ^1.0.10
-    version: 1.0.10
+    specifier: ^1.0.11
+    version: 1.0.11
   '@0xobelisk/sui-client':
-    specifier: file:/Users/feng/Desktop/obelisk/dubhe/packages/sui-client
-    version: file:../../dubhe/packages/sui-client(typescript@5.7.3)
+    specifier: ^1.0.9
+    version: 1.0.9(typescript@5.7.3)
   '@0xobelisk/sui-common':
-    specifier: ^1.0.5
-    version: 1.0.5
+    specifier: ^1.0.6
+    version: 1.0.6
   '@0xobelisk/sui-indexer':
-    specifier: file:/Users/feng/Desktop/obelisk/dubhe/packages/sui-indexer
-    version: file:../../dubhe/packages/sui-indexer(@types/react@18.2.8)(postcss@8.5.1)(react@18.1.0)(typescript@5.7.3)(viem@2.22.15)
+    specifier: ^0.0.4
+    version: 0.0.4(@types/react@18.2.8)(postcss@8.5.1)(react@18.1.0)(typescript@5.7.3)(viem@2.22.15)
   '@mysten/sui':
     specifier: 1.19.0
     version: 1.19.0(typescript@5.7.3)
@@ -172,13 +172,13 @@ packages:
       typescript: 5.7.3
     dev: false
 
-  /@0xobelisk/sui-cli@1.0.10:
-    resolution: {integrity: sha512-trebmXHi6JK6nMzsEYQEcVWPj9nJo579htNeWczM8iPgck4RI7WYrLB3VQYurPpVJjdYs3kKRYTp1SfDli4RmQ==}
+  /@0xobelisk/sui-cli@1.0.11:
+    resolution: {integrity: sha512-LO+Lpd7vmhoHIq8i3+Q3Ccxb/bWjfrRC6baucEVWP/TBN/jNGNsmcY9hjo6NbshdYkJonbT4SRcjhNaCPSrmTA==}
     engines: {node: '>=18'}
     hasBin: true
     dependencies:
-      '@0xobelisk/sui-client': 1.0.5(typescript@5.1.6)
-      '@0xobelisk/sui-common': 1.0.5
+      '@0xobelisk/sui-client': 1.0.9(typescript@5.1.6)
+      '@0xobelisk/sui-common': 1.0.6
       '@mysten/sui': 1.19.0(typescript@5.1.6)
       '@types/sqlite3': 3.1.11
       chalk: 5.4.1
@@ -200,11 +200,13 @@ packages:
       - '@gql.tada/svelte-support'
       - '@gql.tada/vue-support'
       - bluebird
+      - bufferutil
       - supports-color
+      - utf-8-validate
     dev: false
 
-  /@0xobelisk/sui-client@1.0.5(typescript@5.1.6):
-    resolution: {integrity: sha512-5hhgtcrNJ+2+Q1yRdtIhQIsvHZtC23I27/Z42MC3znnL03v4BK7I+Ixv9NP2GJVeOAW4cJ0/wgJaFOVR2DLUsA==}
+  /@0xobelisk/sui-client@1.0.9(typescript@5.1.6):
+    resolution: {integrity: sha512-O9PrPy31TZCRHBvD/SDA0rblL6Xein4CZIBizgL9mVmIjHlu/vIXolAdQqPHRvj8ePvji+uEa8q76ebSSFP5GA==}
     engines: {node: '>=18'}
     dependencies:
       '@graphql-typed-document-node/core': 3.2.0(graphql@16.10.0)
@@ -228,14 +230,51 @@ packages:
       ts-retry-promise: 0.7.1
       tweetnacl: 1.0.3
       valibot: 0.36.0
+      ws: 8.18.0
     transitivePeerDependencies:
       - '@gql.tada/svelte-support'
       - '@gql.tada/vue-support'
+      - bufferutil
       - typescript
+      - utf-8-validate
     dev: false
 
-  /@0xobelisk/sui-common@1.0.5:
-    resolution: {integrity: sha512-cy04KAQp6e6SzcsRAoDqsm9YZLxSQKlgNWxxT7DCGaL82hNDGM3C1VAQTnE4DXsp7xjGo1nh6pk3sFmqJRxyOA==}
+  /@0xobelisk/sui-client@1.0.9(typescript@5.7.3):
+    resolution: {integrity: sha512-O9PrPy31TZCRHBvD/SDA0rblL6Xein4CZIBizgL9mVmIjHlu/vIXolAdQqPHRvj8ePvji+uEa8q76ebSSFP5GA==}
+    engines: {node: '>=18'}
+    dependencies:
+      '@graphql-typed-document-node/core': 3.2.0(graphql@16.10.0)
+      '@mysten/bcs': 1.2.1
+      '@mysten/sui': 1.19.0(typescript@5.7.3)
+      '@mysten/zklogin': 0.7.30(typescript@5.7.3)
+      '@noble/curves': 1.8.1
+      '@noble/hashes': 1.7.1
+      '@scure/bip39': 1.5.4
+      '@suchipi/femver': 1.0.0
+      assert: 2.1.0
+      bech32: 2.0.0
+      colorts: 0.1.63
+      gql.tada: 1.8.10(graphql@16.10.0)(typescript@5.7.3)
+      graphql: 16.10.0
+      husky: 8.0.3
+      keccak256: 1.0.6
+      process: 0.11.10
+      superstruct: 1.0.4
+      tmp: 0.2.3
+      ts-retry-promise: 0.7.1
+      tweetnacl: 1.0.3
+      valibot: 0.36.0
+      ws: 8.18.0
+    transitivePeerDependencies:
+      - '@gql.tada/svelte-support'
+      - '@gql.tada/vue-support'
+      - bufferutil
+      - typescript
+      - utf-8-validate
+    dev: false
+
+  /@0xobelisk/sui-common@1.0.6:
+    resolution: {integrity: sha512-F6C4fEBmNKUMW4ZF/MR9FgTnaEXbpkBGMousjVyGa/Wd18wo7hemMLAlSv9W6Cd21yzOPxicXPHPqwZwLB9apA==}
     engines: {node: '>=18'}
     dependencies:
       '@mysten/sui': 1.19.0(typescript@5.1.6)
@@ -260,6 +299,85 @@ packages:
       - '@gql.tada/svelte-support'
       - '@gql.tada/vue-support'
       - supports-color
+    dev: false
+
+  /@0xobelisk/sui-indexer@0.0.4(@types/react@18.2.8)(postcss@8.5.1)(react@18.1.0)(typescript@5.7.3)(viem@2.22.15):
+    resolution: {integrity: sha512-wGdMOqjLxotjcT0ZVBKVH+5fiXdbILfV3kp4yCGTDC2rhgWBi2k4drYkSMKN6GN3Q/0ox/jHGC4lNSQbjIQv3A==}
+    hasBin: true
+    peerDependencies:
+      viem: 2.x
+    dependencies:
+      '@0xobelisk/sui-common': 1.0.6
+      '@graphql-tools/schema': 10.0.16(graphql@16.10.0)
+      '@koa/cors': 4.0.0
+      '@koa/router': 12.0.2
+      '@latticexyz/block-logs-stream': 2.2.16(typescript@5.7.3)(viem@2.22.15)(zod@3.23.8)
+      '@latticexyz/common': 2.2.16(typescript@5.7.3)(viem@2.22.15)(zod@3.23.8)
+      '@latticexyz/protocol-parser': 2.2.16(typescript@5.7.3)(viem@2.22.15)(zod@3.23.8)
+      '@latticexyz/store': 2.2.16(typescript@5.7.3)(viem@2.22.15)(zod@3.23.8)
+      '@latticexyz/store-sync': 2.2.16(@types/react@18.2.8)(better-sqlite3@8.7.0)(react@18.1.0)(typescript@5.7.3)(viem@2.22.15)
+      '@mysten/sui': 1.19.0(typescript@5.7.3)
+      '@sentry/node': 7.120.3
+      '@sentry/profiling-node': 1.3.5(@sentry/node@7.120.3)
+      '@sentry/utils': 7.120.3
+      '@trpc/client': 10.34.0(@trpc/server@10.34.0)
+      '@trpc/server': 10.34.0
+      accepts: 1.3.8
+      better-sqlite3: 8.7.0
+      debug: 4.4.0
+      dotenv: 16.4.7
+      drizzle-orm: 0.28.6(better-sqlite3@8.7.0)(kysely@0.26.3)(postgres@3.3.5)(sql.js@1.12.0)
+      graphql: 16.10.0
+      graphql-yoga: 5.10.11(graphql@16.10.0)
+      koa: 2.15.3
+      koa-compose: 4.1.0
+      postgres: 3.3.5
+      prom-client: 15.1.3
+      rxjs: 7.5.5
+      superjson: 1.13.3
+      trpc-koa-adapter: 1.2.2(@trpc/server@10.34.0)(koa@2.15.3)
+      tsup: 8.3.6(postcss@8.5.1)(typescript@5.7.3)
+      viem: 2.22.15(typescript@5.7.3)(zod@3.24.1)
+      ws: 8.18.0
+      yargs: 17.7.2
+      zod: 3.23.8
+    transitivePeerDependencies:
+      - '@aws-sdk/client-kms'
+      - '@aws-sdk/client-rds-data'
+      - '@cloudflare/workers-types'
+      - '@gql.tada/svelte-support'
+      - '@gql.tada/vue-support'
+      - '@libsql/client'
+      - '@microsoft/api-extractor'
+      - '@neondatabase/serverless'
+      - '@opentelemetry/api'
+      - '@planetscale/database'
+      - '@swc/core'
+      - '@tanstack/react-query'
+      - '@types/better-sqlite3'
+      - '@types/pg'
+      - '@types/react'
+      - '@types/sql.js'
+      - '@vercel/postgres'
+      - asn1.js
+      - bufferutil
+      - bun-types
+      - immer
+      - jiti
+      - knex
+      - kysely
+      - mysql2
+      - pg
+      - postcss
+      - react
+      - sql.js
+      - sqlite3
+      - supports-color
+      - tsx
+      - typescript
+      - utf-8-validate
+      - wagmi
+      - yaml
     dev: false
 
   /@adobe/css-tools@4.4.1:
@@ -4381,6 +4499,7 @@ packages:
 
   /emoji-regex@8.0.0:
     resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}
+    requiresBuild: true
 
   /emoji-regex@9.2.2:
     resolution: {integrity: sha512-L18DaJsXSUk2+42pv8mLs5jJT2hqFkFE4j21wOmgbUqsZ2hL72NsUU785g9RXgo3s0ZNgVl42TiHp3ZtOv/Vyg==}
@@ -5785,6 +5904,7 @@ packages:
   /is-fullwidth-code-point@3.0.0:
     resolution: {integrity: sha512-zymm5+u+sCsSWyD9qNaejV3DFvhCKclKdizYaJUuHA83RLjb7nSuGnddCHGv0hk+KY7BMAlsWeK4Ueg6EV6XQg==}
     engines: {node: '>=8'}
+    requiresBuild: true
 
   /is-generator-fn@2.1.0:
     resolution: {integrity: sha512-cTIB4yPYL/Grw0EaSzASzg6bBy9gqCofvWN8okThAYIxKJZC+udlRAmGbM0XLeniEJSs8uEgHPGuHSe1XsOLSQ==}
@@ -8499,6 +8619,7 @@ packages:
 
   /string_decoder@1.3.0:
     resolution: {integrity: sha512-hkRX8U1WjJFd8LsDJ2yQ/wWWxaopEsABU1XfkM8A+j0+85JAGppt16cr1Whg6KIbb4okU6Mql6BOj+uup/wKeA==}
+    requiresBuild: true
     dependencies:
       safe-buffer: 5.2.1
     dev: false
@@ -9419,121 +9540,4 @@ packages:
       '@types/react': 18.2.8
       react: 18.1.0
       use-sync-external-store: 1.4.0(react@18.1.0)
-    dev: false
-
-  file:../../dubhe/packages/sui-client(typescript@5.7.3):
-    resolution: {directory: ../../dubhe/packages/sui-client, type: directory}
-    id: file:../../dubhe/packages/sui-client
-    name: '@0xobelisk/sui-client'
-    engines: {node: '>=18'}
-    dependencies:
-      '@graphql-typed-document-node/core': 3.2.0(graphql@16.10.0)
-      '@mysten/bcs': 1.2.1
-      '@mysten/sui': 1.19.0(typescript@5.7.3)
-      '@mysten/zklogin': 0.7.30(typescript@5.7.3)
-      '@noble/curves': 1.8.1
-      '@noble/hashes': 1.7.1
-      '@scure/bip39': 1.5.4
-      '@suchipi/femver': 1.0.0
-      assert: 2.1.0
-      bech32: 2.0.0
-      colorts: 0.1.63
-      gql.tada: 1.8.10(graphql@16.10.0)(typescript@5.7.3)
-      graphql: 16.10.0
-      husky: 8.0.3
-      keccak256: 1.0.6
-      process: 0.11.10
-      superstruct: 1.0.4
-      tmp: 0.2.3
-      ts-retry-promise: 0.7.1
-      tweetnacl: 1.0.3
-      valibot: 0.36.0
-      ws: 8.18.0
-    transitivePeerDependencies:
-      - '@gql.tada/svelte-support'
-      - '@gql.tada/vue-support'
-      - bufferutil
-      - typescript
-      - utf-8-validate
-    dev: false
-
-  file:../../dubhe/packages/sui-indexer(@types/react@18.2.8)(postcss@8.5.1)(react@18.1.0)(typescript@5.7.3)(viem@2.22.15):
-    resolution: {directory: ../../dubhe/packages/sui-indexer, type: directory}
-    id: file:../../dubhe/packages/sui-indexer
-    name: '@0xobelisk/sui-indexer'
-    hasBin: true
-    peerDependencies:
-      viem: 2.x
-    dependencies:
-      '@0xobelisk/sui-common': 1.0.5
-      '@graphql-tools/schema': 10.0.16(graphql@16.10.0)
-      '@koa/cors': 4.0.0
-      '@koa/router': 12.0.2
-      '@latticexyz/block-logs-stream': 2.2.16(typescript@5.7.3)(viem@2.22.15)(zod@3.23.8)
-      '@latticexyz/common': 2.2.16(typescript@5.7.3)(viem@2.22.15)(zod@3.23.8)
-      '@latticexyz/protocol-parser': 2.2.16(typescript@5.7.3)(viem@2.22.15)(zod@3.23.8)
-      '@latticexyz/store': 2.2.16(typescript@5.7.3)(viem@2.22.15)(zod@3.23.8)
-      '@latticexyz/store-sync': 2.2.16(@types/react@18.2.8)(better-sqlite3@8.7.0)(react@18.1.0)(typescript@5.7.3)(viem@2.22.15)
-      '@mysten/sui': 1.19.0(typescript@5.7.3)
-      '@sentry/node': 7.120.3
-      '@sentry/profiling-node': 1.3.5(@sentry/node@7.120.3)
-      '@sentry/utils': 7.120.3
-      '@trpc/client': 10.34.0(@trpc/server@10.34.0)
-      '@trpc/server': 10.34.0
-      accepts: 1.3.8
-      better-sqlite3: 8.7.0
-      debug: 4.4.0
-      dotenv: 16.4.7
-      drizzle-orm: 0.28.6(better-sqlite3@8.7.0)(kysely@0.26.3)(postgres@3.3.5)(sql.js@1.12.0)
-      graphql: 16.10.0
-      graphql-yoga: 5.10.11(graphql@16.10.0)
-      koa: 2.15.3
-      koa-compose: 4.1.0
-      postgres: 3.3.5
-      prom-client: 15.1.3
-      rxjs: 7.5.5
-      superjson: 1.13.3
-      trpc-koa-adapter: 1.2.2(@trpc/server@10.34.0)(koa@2.15.3)
-      tsup: 8.3.6(postcss@8.5.1)(typescript@5.7.3)
-      viem: 2.22.15(typescript@5.7.3)(zod@3.24.1)
-      ws: 8.18.0
-      yargs: 17.7.2
-      zod: 3.23.8
-    transitivePeerDependencies:
-      - '@aws-sdk/client-kms'
-      - '@aws-sdk/client-rds-data'
-      - '@cloudflare/workers-types'
-      - '@gql.tada/svelte-support'
-      - '@gql.tada/vue-support'
-      - '@libsql/client'
-      - '@microsoft/api-extractor'
-      - '@neondatabase/serverless'
-      - '@opentelemetry/api'
-      - '@planetscale/database'
-      - '@swc/core'
-      - '@tanstack/react-query'
-      - '@types/better-sqlite3'
-      - '@types/pg'
-      - '@types/react'
-      - '@types/sql.js'
-      - '@vercel/postgres'
-      - asn1.js
-      - bufferutil
-      - bun-types
-      - immer
-      - jiti
-      - knex
-      - kysely
-      - mysql2
-      - pg
-      - postcss
-      - react
-      - sql.js
-      - sqlite3
-      - supports-color
-      - tsx
-      - typescript
-      - utf-8-validate
-      - wagmi
-      - yaml
     dev: false

@@ -14,19 +14,6 @@ import { SCHEMA_ID, NETWORK, PACKAGE_ID } from '../../chain/config';
 import { PRIVATEKEY } from '../../chain/key';
 import { toast } from 'sonner';
 
-function getExplorerUrl(network: NetworkType, digest: string) {
-  switch (network) {
-    case 'testnet':
-      return `https://explorer.polymedia.app/txblock/${digest}?network=${network}`;
-    case 'mainnet':
-      return `https://suiscan.xyz/tx/${digest}`;
-    case 'devnet':
-      return `https://explorer.polymedia.app/txblock/${digest}?network=${network}`;
-    case 'localnet':
-      return `https://explorer.polymedia.app/txblock/${digest}?network=local`;
-  }
-}
-
 const Home = () => {
   const router = useRouter();
   const [value, setValue] = useAtom(Value);
@@ -40,12 +27,11 @@ const Home = () => {
       packageId: PACKAGE_ID,
       metadata: metadata,
     });
-    const counterStorage = await dubhe.getStorage({
+    const counterStorage = await dubhe.getStorageItem({
       name: 'counter',
     });
     console.log('counter Storage ', counterStorage);
-    // console.log('Counter value:', dubhe.view(query_value)[0]);
-    setValue(counterStorage.edges[0].node.value);
+    setValue(counterStorage.value);
   };
 
   const counter = async () => {
@@ -73,7 +59,7 @@ const Home = () => {
             description: new Date().toUTCString(),
             action: {
               label: 'Check in Explorer',
-              onClick: () => window.open(getExplorerUrl(NETWORK, response.digest), '_blank'),
+              onClick: () => window.open(dubhe.getTxExplorerUrl(response.digest), '_blank'),
             },
           });
           setLoading(false);
