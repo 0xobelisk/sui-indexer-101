@@ -6,17 +6,17 @@ settings:
 
 dependencies:
   '@0xobelisk/sui-cli':
-    specifier: ^1.0.11
-    version: 1.0.11
+    specifier: ^1.1.0
+    version: 1.1.0
   '@0xobelisk/sui-client':
-    specifier: ^1.0.10
-    version: 1.0.10(typescript@5.7.3)
+    specifier: ^1.1.0
+    version: 1.1.0(typescript@5.7.3)
   '@0xobelisk/sui-common':
-    specifier: ^1.0.6
-    version: 1.0.6
+    specifier: ^1.1.0
+    version: 1.1.0
   '@0xobelisk/sui-indexer':
-    specifier: ^0.0.5
-    version: 0.0.5(@types/react@18.2.8)(postcss@8.5.1)(react@18.1.0)(typescript@5.7.3)(viem@2.22.15)
+    specifier: ^1.1.1
+    version: 1.1.1(@types/react@18.2.8)(postcss@8.5.1)(react@18.1.0)(typescript@5.7.3)(viem@2.22.15)
   '@mysten/sui':
     specifier: 1.19.0
     version: 1.19.0(typescript@5.7.3)
@@ -172,13 +172,13 @@ packages:
       typescript: 5.7.3
     dev: false
 
-  /@0xobelisk/sui-cli@1.0.11:
-    resolution: {integrity: sha512-LO+Lpd7vmhoHIq8i3+Q3Ccxb/bWjfrRC6baucEVWP/TBN/jNGNsmcY9hjo6NbshdYkJonbT4SRcjhNaCPSrmTA==}
+  /@0xobelisk/sui-cli@1.1.0:
+    resolution: {integrity: sha512-FbtNwyj9K1vicAzjsfnV+cWcE0+JfetRjlli1NRRPKKnsEvUZvqAbbM7eYHk2MqJ5VZLbWbecGmEuankKnX+hw==}
     engines: {node: '>=18'}
     hasBin: true
     dependencies:
-      '@0xobelisk/sui-client': 1.0.9(typescript@5.1.6)
-      '@0xobelisk/sui-common': 1.0.6
+      '@0xobelisk/sui-client': 1.1.0(typescript@5.1.6)
+      '@0xobelisk/sui-common': 1.1.0
       '@mysten/sui': 1.19.0(typescript@5.1.6)
       '@types/sqlite3': 3.1.11
       chalk: 5.4.1
@@ -205,42 +205,8 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@0xobelisk/sui-client@1.0.10(typescript@5.7.3):
-    resolution: {integrity: sha512-43xXBPbqqa2XIf/Eu+4z6Y8yXwyset3JYzPCuHX/YsTwOEtukmCLguebrtGPL4BMU35/GMywDdJBh01MQHDnew==}
-    engines: {node: '>=18'}
-    dependencies:
-      '@graphql-typed-document-node/core': 3.2.0(graphql@16.10.0)
-      '@mysten/bcs': 1.2.1
-      '@mysten/sui': 1.19.0(typescript@5.7.3)
-      '@mysten/zklogin': 0.7.30(typescript@5.7.3)
-      '@noble/curves': 1.8.1
-      '@noble/hashes': 1.7.1
-      '@scure/bip39': 1.5.4
-      '@suchipi/femver': 1.0.0
-      assert: 2.1.0
-      bech32: 2.0.0
-      colorts: 0.1.63
-      gql.tada: 1.8.10(graphql@16.10.0)(typescript@5.7.3)
-      graphql: 16.10.0
-      husky: 8.0.3
-      keccak256: 1.0.6
-      process: 0.11.10
-      superstruct: 1.0.4
-      tmp: 0.2.3
-      ts-retry-promise: 0.7.1
-      tweetnacl: 1.0.3
-      valibot: 0.36.0
-      ws: 8.18.0
-    transitivePeerDependencies:
-      - '@gql.tada/svelte-support'
-      - '@gql.tada/vue-support'
-      - bufferutil
-      - typescript
-      - utf-8-validate
-    dev: false
-
-  /@0xobelisk/sui-client@1.0.9(typescript@5.1.6):
-    resolution: {integrity: sha512-O9PrPy31TZCRHBvD/SDA0rblL6Xein4CZIBizgL9mVmIjHlu/vIXolAdQqPHRvj8ePvji+uEa8q76ebSSFP5GA==}
+  /@0xobelisk/sui-client@1.1.0(typescript@5.1.6):
+    resolution: {integrity: sha512-KP1TiznJGluMOmMZ1t7gkJEdxWilVwrAjfVA+pj2vTewOIBbblbJJqo6V8mnV1K9Ze/on3yMIGF5Ygmipz0Cnw==}
     engines: {node: '>=18'}
     dependencies:
       '@graphql-typed-document-node/core': 3.2.0(graphql@16.10.0)
@@ -273,8 +239,42 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@0xobelisk/sui-common@1.0.6:
-    resolution: {integrity: sha512-F6C4fEBmNKUMW4ZF/MR9FgTnaEXbpkBGMousjVyGa/Wd18wo7hemMLAlSv9W6Cd21yzOPxicXPHPqwZwLB9apA==}
+  /@0xobelisk/sui-client@1.1.0(typescript@5.7.3):
+    resolution: {integrity: sha512-KP1TiznJGluMOmMZ1t7gkJEdxWilVwrAjfVA+pj2vTewOIBbblbJJqo6V8mnV1K9Ze/on3yMIGF5Ygmipz0Cnw==}
+    engines: {node: '>=18'}
+    dependencies:
+      '@graphql-typed-document-node/core': 3.2.0(graphql@16.10.0)
+      '@mysten/bcs': 1.2.1
+      '@mysten/sui': 1.19.0(typescript@5.7.3)
+      '@mysten/zklogin': 0.7.30(typescript@5.7.3)
+      '@noble/curves': 1.8.1
+      '@noble/hashes': 1.7.1
+      '@scure/bip39': 1.5.4
+      '@suchipi/femver': 1.0.0
+      assert: 2.1.0
+      bech32: 2.0.0
+      colorts: 0.1.63
+      gql.tada: 1.8.10(graphql@16.10.0)(typescript@5.7.3)
+      graphql: 16.10.0
+      husky: 8.0.3
+      keccak256: 1.0.6
+      process: 0.11.10
+      superstruct: 1.0.4
+      tmp: 0.2.3
+      ts-retry-promise: 0.7.1
+      tweetnacl: 1.0.3
+      valibot: 0.36.0
+      ws: 8.18.0
+    transitivePeerDependencies:
+      - '@gql.tada/svelte-support'
+      - '@gql.tada/vue-support'
+      - bufferutil
+      - typescript
+      - utf-8-validate
+    dev: false
+
+  /@0xobelisk/sui-common@1.1.0:
+    resolution: {integrity: sha512-fyb+hRi33HseVvJ2UBcS+7GEDtdWrcHo0uh1HIvU8u/jq0DtBgyIpacplQrnty9c+TR1eVR4tctxTExRd2vWMw==}
     engines: {node: '>=18'}
     dependencies:
       '@mysten/sui': 1.19.0(typescript@5.1.6)
@@ -301,13 +301,13 @@ packages:
       - supports-color
     dev: false
 
-  /@0xobelisk/sui-indexer@0.0.5(@types/react@18.2.8)(postcss@8.5.1)(react@18.1.0)(typescript@5.7.3)(viem@2.22.15):
-    resolution: {integrity: sha512-t1X9h9Bas/YJgyVL2KpXTBkXZjoEYRH69OPQzIU3LSHmZrNbCxcae21C5Cur5UbtqUmsVVPBcDVmwUBnotZsQA==}
+  /@0xobelisk/sui-indexer@1.1.1(@types/react@18.2.8)(postcss@8.5.1)(react@18.1.0)(typescript@5.7.3)(viem@2.22.15):
+    resolution: {integrity: sha512-Cx58mObsYZskoqjMbgVIXfTyLhXl7h0JPV13zDCIUvbHpc1/Ycs0MdxADPaN6/DwrW8Ti2fhQc9g7r48jFlnUg==}
     hasBin: true
     peerDependencies:
       viem: 2.x
     dependencies:
-      '@0xobelisk/sui-common': 1.0.6
+      '@0xobelisk/sui-common': 1.1.0
       '@graphql-tools/schema': 10.0.16(graphql@16.10.0)
       '@koa/cors': 4.0.0
       '@koa/router': 12.0.2
@@ -316,6 +316,7 @@ packages:
       '@latticexyz/protocol-parser': 2.2.16(typescript@5.7.3)(viem@2.22.15)(zod@3.23.8)
       '@latticexyz/store': 2.2.16(typescript@5.7.3)(viem@2.22.15)(zod@3.23.8)
       '@latticexyz/store-sync': 2.2.16(@types/react@18.2.8)(better-sqlite3@8.7.0)(react@18.1.0)(typescript@5.7.3)(viem@2.22.15)
+      '@mysten/graphql-transport': 0.2.40(typescript@5.7.3)
       '@mysten/sui': 1.19.0(typescript@5.7.3)
       '@sentry/node': 7.120.3
       '@sentry/profiling-node': 1.3.5(@sentry/node@7.120.3)
@@ -2267,6 +2268,19 @@ packages:
       bs58: 6.0.0
     dev: false
 
+  /@mysten/graphql-transport@0.2.40(typescript@5.7.3):
+    resolution: {integrity: sha512-GL8SIrWOfWBazx77fB09D2Txih4Bulfyza737vxMHuf4A4d96OUU/6LAcfiCOc25dpfkxmSSb1vmi2gu2Ha3DA==}
+    dependencies:
+      '@graphql-typed-document-node/core': 3.2.0(graphql@16.10.0)
+      '@mysten/bcs': 1.2.1
+      '@mysten/sui': 1.21.0(typescript@5.7.3)
+      graphql: 16.10.0
+    transitivePeerDependencies:
+      - '@gql.tada/svelte-support'
+      - '@gql.tada/vue-support'
+      - typescript
+    dev: false
+
   /@mysten/sui@1.15.1(typescript@5.1.6):
     resolution: {integrity: sha512-q8m+xtuh//rHEwEmk6pr7Dguw6/2ySNye2Oy1w6ivbkeRFgqoEE64+fYuMK+lX/SEPhOTEZtN7fp/Trno0KMnw==}
     engines: {node: '>=18'}
@@ -2346,6 +2360,29 @@ packages:
       '@scure/bip32': 1.6.2
       '@scure/bip39': 1.5.4
       '@simplewebauthn/typescript-types': 7.4.0
+      '@suchipi/femver': 1.0.0
+      bech32: 2.0.0
+      gql.tada: 1.8.10(graphql@16.10.0)(typescript@5.7.3)
+      graphql: 16.10.0
+      jose: 5.9.6
+      poseidon-lite: 0.2.1
+      valibot: 0.36.0
+    transitivePeerDependencies:
+      - '@gql.tada/svelte-support'
+      - '@gql.tada/vue-support'
+      - typescript
+    dev: false
+
+  /@mysten/sui@1.21.0(typescript@5.7.3):
+    resolution: {integrity: sha512-A+UXOo2ODhmktV6J6lOIqelRtVvQ0V252T2qaoJ0E92HYjIi3xMNEQrqu4K8TcN3gZCjqK8jQZwmbYZku8rIpw==}
+    engines: {node: '>=18'}
+    dependencies:
+      '@graphql-typed-document-node/core': 3.2.0(graphql@16.10.0)
+      '@mysten/bcs': 1.2.1
+      '@noble/curves': 1.8.1
+      '@noble/hashes': 1.7.1
+      '@scure/bip32': 1.6.2
+      '@scure/bip39': 1.5.4
       '@suchipi/femver': 1.0.0
       bech32: 2.0.0
       gql.tada: 1.8.10(graphql@16.10.0)(typescript@5.7.3)
