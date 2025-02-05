@@ -8,7 +8,7 @@
 
   use counter::schema::Schema;
 
-  public(package) fun run(schema: &mut Schema, _ctx: &mut TxContext) {
-    schema.counter().set(0);
+  public(package) fun run(_schema: &mut Schema, _ctx: &mut TxContext) {
+    _schema.value().set(0);
   }
 }

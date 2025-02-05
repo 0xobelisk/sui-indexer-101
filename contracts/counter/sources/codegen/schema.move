@@ -28,17 +28,17 @@
     id: UID,
   }
 
-  public fun borrow_counter(self: &Schema): &StorageValue<u32> {
-    storage::borrow_field(&self.id, b"counter")
+  public fun borrow_value(self: &Schema): &StorageValue<u32> {
+    storage::borrow_field(&self.id, b"value")
   }
 
-  public(package) fun counter(self: &mut Schema): &mut StorageValue<u32> {
-    storage::borrow_mut_field(&mut self.id, b"counter")
+  public(package) fun value(self: &mut Schema): &mut StorageValue<u32> {
+    storage::borrow_mut_field(&mut self.id, b"value")
   }
 
   public(package) fun create(ctx: &mut TxContext): Schema {
     let mut id = object::new(ctx);
-    storage::add_field<StorageValue<u32>>(&mut id, b"counter", storage_value::new(b"counter", ctx));
+    storage::add_field<StorageValue<u32>>(&mut id, b"value", storage_value::new(b"value", ctx));
     Schema { id }
   }
 
@@ -46,8 +46,8 @@
 
   // ======================================== View Functions ========================================
 
-  public fun get_counter(self: &Schema): &u32 {
-    self.borrow_counter().get()
+  public fun get_value(self: &Schema): &u32 {
+    self.borrow_value().get()
   }
 
   // =========================================================================================================
