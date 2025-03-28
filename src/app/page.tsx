@@ -1,6 +1,6 @@
 'use client';
 
-import { loadMetadata, Dubhe, Transaction, TransactionResult } from '@0xobelisk/sui-client';
+import { loadMetadata, Dubhe, Transaction, TransactionResult, SubscriptionKind } from '@0xobelisk/sui-client';
 import { useEffect, useState } from 'react';
 import { useAtom } from 'jotai';
 import { Value } from '@/app/state';
@@ -52,7 +52,6 @@ export default function Home() {
       tx,
       onSuccess: async result => {
         setTimeout(async () => {
-          await queryCounterValue();
           toast('Transaction Successful', {
             description: new Date().toUTCString(),
             action: {
@@ -75,8 +74,12 @@ export default function Home() {
 
   const subscribeToCounter = async (dubhe: Dubhe) => {
     try {
-      const sub = await dubhe.subscribe(['value'], data => {
+      const sub = await dubhe.subscribe([{
+        kind: SubscriptionKind.Schema,
+        name: 'value',
+      }], data => {
         console.log('Received increment event:', data);
+
         // Update counter value after receiving event
         setValue(data.value);
         toast('Counter Updated', {
